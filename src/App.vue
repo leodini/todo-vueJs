@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    {{msg}}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+
+  },
+  data(){
+    return {
+      tdos: [
+        {
+          id: 1,
+          title: 'Todo one',
+          completed: false
+        },
+        {
+          id: 2,
+          title: 'todo two',
+          completed: false
+        },
+        {
+          id: 3,
+          title: 'todo three',
+          completed: false
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+  }
 </style>
